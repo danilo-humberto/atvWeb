@@ -7,6 +7,31 @@ var urlencodedParser = bodyParser.urlencoded({extended:false})
 const informacoes = require('./model/cadastrar')
 //informacoes.sync()
 
+app.post('/addCar', urlencodedParser, (req, res) => {
+    
+    var marca = req.body.marca
+    var nomeCarro = req.body.nomeCarro
+    var anoFabric = req.body.anoFabric
+    var useOrZero = req.body.useOrZero
+    var nomeDono = req.body.nomeDono
+    var cpf = req.body.cpf
+
+    // inserindo os dados no banco de dados
+
+    var info = informacoes.create({
+        marca:marca,
+        nomeCarro:nomeCarro,
+        anoFabric:anoFabric,
+        useOrZero:useOrZero,
+        nomeDono:nomeDono,
+        cpf:cpf
+    }).then(() => {
+        res.send('Produto inserido com sucesso.')
+    }).catch((erro) => {
+        res.send('Erro ao inserir o produto: ' + erro)
+    })
+})
+
 app.post('/addCar', urlencodedParser, (req, res) => { 
 
     var marca = req.body.marca
