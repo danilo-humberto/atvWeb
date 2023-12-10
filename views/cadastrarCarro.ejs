@@ -1,0 +1,13 @@
+<%- include('header') %>
+
+<form action="/addCar" method="post">
+    Marca: <input type="text" name="marca"><br>
+    Nome do Carro: <input type="text" name="nomeCarro"><br>
+    Ano de Fabricação: <input type="text" name="anoFabric"><br>
+    Usado ou Carro Zero? <input type="text" name="useOrZero"><br>
+    Nome do Dono: <input type="text" name="nomeDono"><br>
+    Cpf do Dono: <input type="text" name="cpf"><br>
+    <input type="submit" value="enviar">
+</form>
+
+<%- include('rodape') %>

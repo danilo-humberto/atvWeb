@@ -1,0 +1,36 @@
+<%- include('header') %>
+
+<table>
+    <tr>
+        <th>Marca</th>
+        <th>NomeCarro</th>
+        <th>Ano</th>
+        <th>Usado ou Zero</th>
+        <th>Dono</th>
+        <th>CPF</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
+    </tr>
+
+<%
+    for (var i = 0; i < carros.length;i++){
+%>
+
+        <tr>
+            <td> <%= carros[i].marca %></td>
+            <td> <%= carros[i].nomeCarro %></td>
+            <td> <%= carros[i].anoFabric %></td>
+            <td> <%= carros[i].useOrZero %></td>
+            <td> <%= carros[i].nomeDono %></td>
+            <td> <%= carros[i].cpf %></td>
+            <td><a href="/atualizarCarros?id=<%= carros[i].id %>">Atualizar</a></td>
+            <td><a href="/deleteCarros?id=<%= carros[i].id %>" onclick="return confirm('Tem Certeza?')">Deletar</a></td>
+        </tr>
+
+<%
+    }
+%>
+    
+</table>
+
+<%- include('rodape') %>
