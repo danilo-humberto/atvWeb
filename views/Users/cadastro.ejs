@@ -1,0 +1,10 @@
+<%- include('../header&footer/header') %>
+<strong>Faça o cadastro abaixo: </strong>
+<form action="/resultCadastro" method="post">
+    <label>Login:</label> <input type="text" name="login"><br>
+    <label>Nome:</label> <input type="text" name="nome"><br>
+    <label>Senha:</label> <input type="password" name="senha"><br>
+    <label>Nome de Perfil:</label> <input type="text" name="nomePerfil"><br>
+    <input type="submit" value="Enviar">
+</form>
+<%- include('../header&footer/rodape') %>

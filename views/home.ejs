@@ -1,4 +1,10 @@
-<%- include('header') %>
+<%- include('header&footer/header') %>
+
+<% if(typeof(nome) != 'undefined') {%>
+    Olá, <%=nome%> !
+<% } %>
+
 <p>Cadastre aqui os carros: <a href="/cadastrarCarro">Cadastrar</a></p>
 <p>Busque os carros no nosso banco de dados: <a href="/buscaCarros">Buscar</a></p>
-<%- include('rodape') %>
+<p>Veja os usuarios presentes no servidor: <a href="/buscarUsers">Buscar</a></p>
+<%- include('header&footer/rodape') %>

@@ -1,4 +1,4 @@
-<%- include('header') %>
+<%- include('../header&footer/header') %>
 
 <table>
     <tr>
@@ -10,6 +10,7 @@
         <th>CPF</th>
         <th>Atualizar</th>
         <th>Deletar</th>
+        <th>Voltar para tela principal</th>
     </tr>
 
 <%
@@ -25,6 +26,7 @@
             <td> <%= carros[i].cpf %></td>
             <td><a href="/atualizarCarros?id=<%= carros[i].id %>">Atualizar</a></td>
             <td><a href="/deleteCarros?id=<%= carros[i].id %>" onclick="return confirm('Tem Certeza?')">Deletar</a></td>
+            <td><a href="/telaPrincipal">voltar</a></td>
         </tr>
 
 <%
@@ -33,4 +35,4 @@
     
 </table>
 
-<%- include('rodape') %>
+<%- include('../header&footer/rodape') %>

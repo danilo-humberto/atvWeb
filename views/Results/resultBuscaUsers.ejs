@@ -1,0 +1,31 @@
+<%- include('../header&footer/header') %>
+
+<table>
+    <tr>
+        <th>Login</th>
+        <th>Nome</th>
+        <th>Senha</th>
+        <th>Nome do Perfil</th>
+        <th>Atualizar</th>
+        <th>Deletar</th>
+        <th>Voltar para tela principal</th>
+    </tr>
+
+<%
+    for (var i = 0; i < users.length;i++){
+%>
+        <tr>
+            <td> <%= users[i].login %></td>
+            <td> <%= users[i].nome %></td>
+            <td> <%= users[i].senha %></td>
+            <td> <%= users[i].nomePerfil %></td>
+            <td><a href="/atualizarUsers?id=<%= users[i].id %>">Atualizar</a></td>
+            <td><a href="/deleteUsers?id=<%= users[i].id %>" onclick="return confirm('Tem Certeza?')">Deletar</a></td>
+            <td><a href="/telaPrincipal">voltar</a></td>
+        </tr>
+<%
+    }
+%>
+</table>
+
+<%- include('../header&footer/rodape') %>

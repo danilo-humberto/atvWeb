@@ -1,0 +1,11 @@
+<%- include('../header&footer/header') %>
+<strong>Faça o login:</strong> 
+<br>
+<form action="/login" method="post">
+    <label>Login</label> <input type="text" name="login" id="login" required><br>
+    <label>Senha</label> <input type="password" name="senha" id="senha" required><br>
+    <input type="submit" value="Enviar">
+</form>
+<p>Não possui login? <a href="/cadastro">Cadastre-se</a></p>
+<p>Visite a tela de consultas <a href="/telaPrincipal">aqui</a></p>
+<%- include('../header&footer/rodape') %>
