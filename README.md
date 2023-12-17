@@ -1,3 +1,3 @@
-# atvMethodPost
+# Atividade Web2 - IFPE
 
-Atividade Views- dupla: Danilo Humberto e Hellen Eduarda
+Atividade Users- dupla: Danilo Humberto e Hellen Eduarda
